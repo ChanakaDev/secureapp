@@ -30,7 +30,9 @@ class _UserPageState extends State<UserPage> {
   Future init() async {
     // Get userName when initialize the page.
     final name = await UserSecureStorage.getUserName() ?? '';
+    // Get birthDay when initialize the page.
     final birthday = await UserSecureStorage.getBirthday();
+    // Get petList when initialize the page.
     final pets = await UserSecureStorage.getPets() ?? [];
 
     setState(() {
